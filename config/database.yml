@@ -6,21 +6,21 @@ default: &default
 development:
   adapter: postgresql
   encoding: unicode
-  database: HEROKU_POSTGRESQL_NAVY_URL
+  database: get_those_tweets_development
   pool: 5
-  username: henry
+  username: 
   password:
 
 test:
   adapter: postgresql
   encoding: unicode
-  database: HEROKU_POSTGRESQL_NAVY_URL
+  database: get_those_tweets_test
   pool: 5
-  username: henry
+  username: 
   password:
 
 production:
   <<: *default
   adapter: postgresql
   encoding: unicode
-  database: HEROKU_POSTGRESQL_NAVY_URL
+  database: get_those_tweets_prod

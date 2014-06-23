@@ -42,6 +42,10 @@ input[type=text] {
   box-shadow: 0 0 8px black;
 }
 
+#users_search {
+  padding-bottom: 5%;
+}
+
 .friend-count {
   color: #FFF;
   padding: 5%;
