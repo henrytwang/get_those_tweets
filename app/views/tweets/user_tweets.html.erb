@@ -1,0 +1,9 @@
+<%= render "shared/back" %>
+<% @tweets.each do |tweet| %>
+<div class="entries-outer">
+	<div class="entries-inner">
+		<div class="entry"><%= tweet.text %></div>
+	</div>
+</div>
+<% end %>
+<%= render "shared/back" %>

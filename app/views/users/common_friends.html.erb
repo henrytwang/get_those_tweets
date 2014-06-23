@@ -1,0 +1,17 @@
+<%= render "shared/back" %>
+<div class="friend-count">
+	<%= pluralize(@common_friends.size, 'friend') %> in common.
+</div>
+<% @common_friends.each do |friend| %>
+	<div class="entries-outer" style="background-image:url(<%= friend.profile_banner_url %>);">
+		<a href="<%= friend.url %>">
+			<div class="entries-inner">
+				<img class="profile-image" src="<%= friend.profile_image_url %>">
+				<div class="name"><%= friend.name %></div>
+				<div class="screen-name">@<%= friend.screen_name %></div>
+				<div class="description"><%= friend.description %></div>
+			</div>
+		</a>
+	</div>
+<% end %>
+<%= render "shared/back" %>

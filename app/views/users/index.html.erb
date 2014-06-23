@@ -1,0 +1,23 @@
+<%= image_tag("Twitter_logo_blue.png", class: "twitter-logo") %>
+
+<%= form_tag("/tweets", method: "post", id: "handle_select") do %>
+  <%= label_tag("") %>
+  <%= text_field_tag(:handle, '', placeholder: "Type Twitter handle", autofocus: true) %>
+  <br>
+  <br>
+  <%= submit_tag("Show recent tweets") %>
+<% end %>
+
+<div class="or-spacer">
+  <div class="mask"></div>
+</div>
+
+<%= form_tag("/users", method: "post", id: "users_search") do %>
+  <%= text_field_tag(:first_user, '', placeholder: "Twitter handle #1") %>
+  <br>
+  <br>
+  <%= text_field_tag(:second_user, '', placeholder: "Twitter handle #2") %>
+  <br>
+  <br>
+  <%= submit_tag("Find common friends") %>
+<% end %>
