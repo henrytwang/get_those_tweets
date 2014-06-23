@@ -21,4 +21,6 @@ test:
 
 production:
   <<: *default
+  adapter: postgresql
+  encoding: unicode
   database: HEROKU_POSTGRESQL_NAVY_URL
