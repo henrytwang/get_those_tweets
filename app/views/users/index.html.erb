@@ -1,3 +1,10 @@
+<script>
+     if (sessionStorage.getItem("Page2Visited")) {
+          sessionStorage.removeItem("Page2Visited");
+          window.location.reload(true); // force refresh page1
+     }
+</script>
+
 <%= image_tag("Twitter_logo_blue.png", class: "twitter-logo") %>
 
 <%= form_tag("/tweets", method: "post", id: "handle_select") do %>

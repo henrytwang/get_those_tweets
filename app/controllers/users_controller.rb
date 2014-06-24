@@ -33,7 +33,7 @@ class UsersController < ApplicationController
 	      break if cursor == 0
 	    rescue Twitter::Error::TooManyRequests => error
 	      if num_attempts <= max_attempts
-	        cursor = friends.next_cursor if friends && friends.next_cursor
+	        p error
 	        puts "#{running_count} done from rescue block..."
 	        puts "Hit rate limit, sleeping for #{error.rate_limit.reset_in}..."
 	        sleep error.rate_limit.reset_in
